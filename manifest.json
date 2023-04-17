@@ -1,0 +1,22 @@
+{
+  "name": "Replit - youtube distraction killer",
+  "version": "1.0",
+  "description": "Block getting video Recommendation on youtube. No home or related video recommendation. stay focused.",
+  "manifest_version": 3,
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  }
+}
