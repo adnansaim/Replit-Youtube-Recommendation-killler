@@ -1,4 +1,6 @@
 const logo = document.querySelector("#logo");
+const sideBarLogo = document.querySelectorAll(".style-scope.ytd-app");
+const ThreeBars = document.getElementById("guide-button");
 
 function hideHomeRecommendations() {
   let contents = document.querySelectorAll("#contents");
@@ -11,6 +13,7 @@ function hideHomeRecommendations() {
 }
 window.addEventListener("load", function () {
   hideHomeRecommendations();
+  ThreeBars.style.display = "none";
 });
 
 window.onload = setTimeout(() => {
@@ -19,8 +22,21 @@ window.onload = setTimeout(() => {
 
 function hideRelatedRecommendations() {
   let relatedDiv = document.querySelectorAll("#related");
+  let homeButton = document.querySelector("#endpoint");
   relatedDiv[0].style.display = "none";
+  homeButton.style.display = "none";
 }
 logo.addEventListener("click", function () {
-  window.location.href = "https://www.youtube.com/";
+  goToYoutube();
 });
+sideBarLogo[15].addEventListener("click", function () {
+  goToYoutube();
+});
+
+ThreeBars.addEventListener("click", function () {
+  goToYoutube();
+});
+
+function goToYoutube() {
+  window.location.href = "https://www.youtube.com/";
+}
